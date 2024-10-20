@@ -13,21 +13,21 @@ function handleHeartClick() {
     // User clicked on the empty heart
     mimicServerCall()
       .then(() => {
-        heart.textContent = FULL_HEART; // Change to full heart
-        heart.classList.add('activated-heart'); // Add class to style it
+        heart.textContent = FULL_HEART;
+        heart.classList.add('activated-heart'); 
       })
       .catch((error) => {
-        errorMessage.textContent = error; // Display the error message
-        errorModal.classList.remove('hidden'); // Show the error modal
+        errorMessage.textContent = error; 
+        errorModal.classList.remove('hidden'); 
         
         setTimeout(() => {
-          errorModal.classList.add('hidden'); // Hide the error modal after 3 seconds
+          errorModal.classList.add('hidden'); 
         }, 3000);
       });
   } else {
     // User clicked on the full heart
-    heart.textContent = EMPTY_HEART; // Change to empty heart
-    heart.classList.remove('activated-heart'); // Remove class to revert styling
+    heart.textContent = EMPTY_HEART; 
+    heart.classList.remove('activated-heart'); 
   }
 }
 
